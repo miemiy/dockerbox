@@ -1,0 +1,16 @@
+gitlab:
+  image: 'gitlab/gitlab-ce:latest'
+  restart: always
+  hostname: 'gitlab.lab.home'
+  container_name: bluesky.gitlab
+  environment:
+    GITLAB_OMNIBUS_CONFIG: |
+      external_url 'http://gitlab.lab.home'
+      gitlab_rails['gitlab_shell_ssh_port'] = 10222
+  ports:
+    - '80:80'
+    - '10222:22'
+  volumes:
+    - '/ext/platform/containers/bluesky.gitlab/_data/config:/etc/gitlab'
+    - '/ext/platform/containers/bluesky.gitlab/_data/logs:/var/log/gitlab'
+    - '/ext/platform/containers/bluesky.gitlab/_data/data:/var/opt/gitlab'

@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  bind:
+    container_name: bind.blusky
+    restart: always
+    image: sameersbn/bind:latest
+    environment:
+      - ROOT_PASSWORD=1qaz@WSX
+    ports:
+      - "192.168.1.188:53:53/udp"
+      - "192.168.1.188:53:53/tcp"
+      - "10100:10000/tcp"
+    volumes:
+      - /ext/platform/containers/bind.bluesky/_data/bind:/data
+
