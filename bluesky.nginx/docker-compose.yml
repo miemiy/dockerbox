@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  web:
+    container_name: bluesky.nginx
+    restart: always
+    image: nginx:latest
+    ports:
+      - "10080:80"
+    volumes:
+      - /ext/platform/containers/bluesky.nginx/_data/webroot:/usr/share/nginx/html
+      - /ext/platform/containers/bluesky.nginx/_data/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+
