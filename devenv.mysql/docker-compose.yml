@@ -1,0 +1,17 @@
+#######
+version: '2'
+
+services:
+ mysql:
+  image: "mysql:5.7"
+  restart: always
+  container_name: bluesky.dev.mysql
+  hostname: 'mysql.dev.bluesky.lab.home'
+  environment:
+    - MYSQL_ROOT_PASSWORD=blueskypwd
+  ports:
+    - '3306:3306'
+  volumes:
+    - '/ext/platform/containers/bluesky.mysql/_data/instanceOne:/var/lib/mysql'
+  command: [mysqld, --character-set-server=utf8mb4, --collation-server=utf8mb4_unicode_ci]
+## end
