@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  plantuml:
+    container_name: bluesky.plantuml
+    restart: always
+    image: plantuml/plantuml-server:jetty
+    ports:
+      - "21000:8080"
+####end
