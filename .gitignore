@@ -1,0 +1,45 @@
+###############
+#  fixed file #
+###############
+*.exe
+*.jar
+*.war
+*.doc
+*.dll
+*.so
+
+###############
+#   target    #
+###############
+target/
+
+
+
+
+###############
+#  temp file  #
+###############
+~*
+*.log
+*.cmm
+*.men
+*.fig
+*.cmp
+*.tmp
+.flattened-pom.xml
+
+
+
+###############
+#    idea   #
+###############
+*.iml
+.idea/
+
+
+###############
+#    Eclipse  #
+###############
+**/.settings/
+**/.project
+**/.classpath
