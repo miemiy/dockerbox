@@ -32,5 +32,30 @@ bin
 /home/admin/bin
 [admin@hive bin]$
 
+$ curl -O http://webfile.bluesky.lab.home:10080/bigdata/apache-hive-2.3.5-bin.tar.gz
+$ curl -O http://webfile.bluesky.lab.home:10080/bigdata/hadoop-2.9.2.tar.gz
 
 
+
+[admin@hive bigdata]$ pwd
+/ext/bigdata
+[admin@hive bigdata]$ ls -l
+total 12
+drwxrwxr-x 3 admin admin 4096 Oct 27 15:30 hadoop
+drwxrwxr-x 2 admin admin 4096 Oct 27 15:30 hive
+drwxrwxr-x 2 admin admin 4096 Oct 27 15:26 packages
+[admin@hive bigdata]$
+[admin@hive hadoop]$ pwd
+/ext/bigdata/hadoop
+[admin@hive hadoop]$
+[admin@hive hadoop]$ tar zxvf ../packages/hadoop-2.9.2.tar.gz
+
+[admin@hive hadoop]$ cd ..
+[admin@hive bigdata]$ ls
+hadoop  hive  packages
+[admin@hive bigdata]$ cd hive
+[admin@hive hive]$ ls
+[admin@hive hive]$ pwd
+/ext/bigdata/hive
+[admin@hive hive]$ 
+[admin@hive hive]$ tar zxvf ../packages apache-hive-2.3.5-bin.tar.gz

@@ -1,0 +1,19 @@
+#######
+### internal index  box 4  port 104xx
+version: '2'
+
+services:
+ centos-flink:
+  image: "jdeathe/centos-ssh:latest"
+  restart: always
+  container_name: dbox.flink
+  hostname: 'flink.dbox.lab.home'
+  environment:
+    - SSH_USER=admin
+    - SSH_PASSWORD_AUTHENTICATION=true
+    - SSH_USER_PASSWORD=1234qwer
+  ports:
+    - '10422:22'
+    - '10481:8081'
+  volumes:
+    - '/ext/platform/containers/dbox.flink/_data/mnt:/mnt'
