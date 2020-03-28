@@ -1,4 +1,15 @@
 
+## docker volume manged
+
+```bash
+$  docker volume create centosdata
+centosdata
+
+```
+
+
+
+
 ssh -p 10222 app-admin@localhost
 
 PasswordAuthentication enabled

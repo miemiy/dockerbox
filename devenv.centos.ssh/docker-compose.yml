@@ -15,4 +15,4 @@ services:
   ports:
     - '10222:22'
   volumes:
-    - '/ext/platform/containers/bluesky.ssh/_data/mnt:/mnt'
+    - 'centosdata:/mnt'
