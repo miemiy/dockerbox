@@ -1,21 +1,18 @@
 #######
-### internal index  box 2  port 102xx
+### Internal Index 3 -   port 103xx
 version: '3'
-
-volumes:
-  centosdata:
 
 services:
  centos-ssh:
   image: "jdeathe/centos-ssh:latest"
-  restart: always
-  container_name: bluesky.centos.ssh
-  hostname: 'ssh.bluesky.lab.home'
+  container_name: bluesky.vue
+  hostname: 'vue.bluesky.lab.home'
   environment:
     - SSH_USER=admin
     - SSH_PASSWORD_AUTHENTICATION=true
     - SSH_USER_PASSWORD=1234qwer
   ports:
-    - '10222:22'
+    - '10322:22'
+    - '10350-10399:8050-8099'
   volumes:
-    - 'centosdata:/mnt'
+    - '/h/ext/containers/bluesky.vue/_data/mnt:/mnt'
