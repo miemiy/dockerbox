@@ -1,0 +1,18 @@
+#######
+### Internal Index 3 -   port 103xx
+version: '3'
+
+services:
+ centos-ssh:
+  image: "jdeathe/centos-ssh:latest"
+  container_name: bluesky.vuehack
+  hostname: 'vuehack.bluesky.lab.home'
+  environment:
+    - SSH_USER=admin
+    - SSH_PASSWORD_AUTHENTICATION=true
+    - SSH_USER_PASSWORD=1234qwer
+  ports:
+    - '10322:22'
+    - '10350-10352:8050-8052'
+  volumes:
+    - '/h/ext/containers/bluesky.vuehack/_data/mnt:/mnt'
