@@ -1,8 +1,19 @@
+# Inside Docker
 
-###
-Install git from IUS
+1. Install Git 2
+2. Install Python(conda)
+3. Install nvm 
+4. Install node
+
+
+### Install git from IUS
+
 ```
-sudo yum -y install  git2u-all
+sudo yum -y install  git224-all.noarch 
+```
+
+```
+sudo yum list | grrep -i git
 ```
 #####
 
@@ -199,10 +210,20 @@ Creating default alias: default -> 12.16.1 (-> v12.16.1)
 ```
 
 
-``` bash
+```bash
 
 npm run dev --port=8090
 ```
+
 outside localhost:10390
+
+### Install dev tool including g++
+
+```bash
+sudo yum group install "Development Tools"
+
+sudo yum group install --skip-broken  "Development Tools"
+```
+
 
 @end
