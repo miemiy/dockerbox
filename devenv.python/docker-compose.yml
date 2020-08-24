@@ -1,0 +1,29 @@
+#######
+### internal index  box 4  port 104xx
+version: '3'
+
+volumes:
+  master_vol:
+    external: true
+networks:
+  master_net:
+    external: true
+
+
+services:
+ centos-ssh:
+  image: "jdeathe/centos-ssh:latest"
+  restart: always
+  container_name: python.dev
+  hostname: 'python.dev'
+  environment:
+    - SSH_USER=admin
+    - SSH_PASSWORD_AUTHENTICATION=true
+    - SSH_USER_PASSWORD=1234qwer
+  ports:
+    - '10422:22'
+  volumes:
+    - 'master_vol:/mnt'
+  networks:
+    - master_net
+        
