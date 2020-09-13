@@ -1,4 +1,12 @@
 
+# vuehack
+
+## source code 
+
+
+## IDE:VSCode
+In order to user vscode remote, need to expose ssh port to host machine
+
 
 
 ```

@@ -1,0 +1,27 @@
+
+#######
+### i
+version: '3'
+
+volumes:
+  master_vol:
+    external: true
+networks:
+  master_net:
+    external: true
+
+
+services:
+ centos-ssh:
+  image: "jdeathe/centos-ssh:latest"
+  restart: always
+  container_name: java.dev
+  hostname: 'java.dev'
+  environment:
+    - SSH_USER=admin
+    - SSH_PASSWORD_AUTHENTICATION=true
+    - SSH_USER_PASSWORD=1234qwer
+  volumes:
+    - 'master_vol:/mnt'
+  networks:
+    - master_net

@@ -13,6 +13,5 @@ services:
     - SSH_USER_PASSWORD=1234qwer
   ports:
     - '10322:22'
-    - '10350-10352:8050-8052'
   volumes:
     - '/ext/platform/containers/devenv.vuehack/_data/mnt:/mnt'
