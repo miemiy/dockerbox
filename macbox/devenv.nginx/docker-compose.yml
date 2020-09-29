@@ -18,6 +18,7 @@ services:
   hostname: 'nginx.dev'
   volumes:
     - 'master_vol:/mnt'
+    - '/opt/ext/dockervol/macbox/nginx.dev.vol/conf/default.conf:/etc/nginx/conf.d/default.conf'
   networks:
     - master_net
 

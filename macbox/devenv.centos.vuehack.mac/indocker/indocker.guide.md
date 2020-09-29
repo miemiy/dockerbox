@@ -10,10 +10,23 @@
 
 ```
 sudo yum -y install  git224-all.noarch 
+
+sudo yum -y install sclo-git25-git-all.noarch
 ```
 
 ```
-sudo yum list | grrep -i git
+sudo yum list | grep -i git
+```
+
+```
+# 1. Install a package with repository for your system.
+#  (See the Yum Repositories section below.)
+
+# 2. Install the collection:
+yum install sclo-git25
+
+# 3. Start using software collections:
+scl enable sclo-git25 bash
 ```
 #####
 
@@ -21,17 +34,9 @@ sudo yum list | grrep -i git
 ```bash
 [admin@vue ~]$ pwd
 /home/admin
-[admin@vue ~]$ mkdir nannar
-[admin@vue ~]$ cd nannar/
-[admin@vue nannar]$ mkdir packages
-[admin@vue nannar]$ cd packages/
-[admin@vue packages]$ ls
-[admin@vue packages]$ pwd
-/home/admin/nannar/packages
-[admin@vue packages]$ curl -O http://gitlab.lab.home:10080/studio/python/Miniconda3-py37_4.8.2-Linux-x86_64.sh
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100 81.1M  100 81.1M    0     0  11.2M      0  0:00:07  0:00:07 --:--:-- 11.3M
+
+cd  /mnt/shared/packages/conda
+
 [admin@vue packages]$ ls
 Miniconda3-py37_4.8.2-Linux-x86_64.sh
 [admin@vue packages]$
