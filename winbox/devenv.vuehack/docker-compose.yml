@@ -1,0 +1,26 @@
+#######
+### Internal Index 3 -   port 103xx
+version: '3'
+
+volumes:
+  master_vol:
+    external: true
+networks:
+  master_net:
+    external: true
+
+services:
+ centos-ssh:
+  image: "jdeathe/centos-ssh:latest"
+  container_name: vuehack.dev
+  hostname: 'vuehack.dev'
+  environment:
+    - SSH_USER=admin
+    - SSH_PASSWORD_AUTHENTICATION=true
+    - SSH_USER_PASSWORD=1234qwer
+  ports:
+    - '10322:22'
+  volumes:
+      - 'master_vol:/mnt'
+  networks:
+      - master_net

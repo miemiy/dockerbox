@@ -1,0 +1,27 @@
+#######
+### internal index  box 0  port 100xx
+version: '3'
+
+volumes:
+  vol:
+networks:
+  net:
+    driver: bridge
+
+services:
+ centos-ssh:
+  image: "jdeathe/centos-ssh:latest"
+  restart: always
+  container_name: master.dev
+  hostname: 'master.dev'
+  environment:
+    - SSH_USER=admin
+    - SSH_PASSWORD_AUTHENTICATION=true
+    - SSH_USER_PASSWORD=1234qwer
+  ports:
+    - '10022:22'
+  volumes:
+    - 'vol:/mnt'
+  networks:
+    - net
+        

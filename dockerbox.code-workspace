@@ -6,6 +6,12 @@
 	],
 	"settings": {
 		"editor.tokenColorCustomizations": null,
-		"workbench.colorTheme": "Community Material Theme Darker High Contrast"
+		"workbench.colorTheme": "Community Material Theme Darker High Contrast",
+		"terminal.integrated.env.osx": {
+			"PATH": ""
+		},
+		"terminal.integrated.env.linux": {
+			"PATH": ""
+		}
 	}
 }
