@@ -1,0 +1,16 @@
+
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host python.dev
+    HostName localhost
+    Port 10422
+    User admin
+
+Host vuehack.dev
+    HostName localhost
+    Port 10322
+    User admin
+
+Host master.dev
+    HostName localhost
+    Port 1022
+    User admin
