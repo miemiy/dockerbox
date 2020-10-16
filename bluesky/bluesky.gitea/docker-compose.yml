@@ -1,0 +1,13 @@
+#######
+### Internal Index 3 -   port 110xx
+version: '3'
+
+services:
+ gitea:
+  image: "gitea/gitea:latest"
+  container_name: gitea.bluesky
+  hostname: 'gitea.bluesky'
+  ports:
+    - '11022:22'
+    - '11080:3000'
+ 
