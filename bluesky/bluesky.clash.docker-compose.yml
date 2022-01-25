@@ -1,0 +1,17 @@
+version: '3'
+services:
+  clash:
+    image: dreamacro/clash
+    volumes:
+      - /ext/platform/containers/bluesky.clash/_data/config/config.yaml:/root/.config/clash/config.yaml
+      # dashboard volume
+      # - ./ui:/ui
+    ports:
+      - "7890:7890"
+      - "7891:7891"
+      # If you need external controller, you can export this port.
+      - "9100:9100"
+    restart: always
+    # When your system is Linux, you can use `network_mode: "host"` directly.
+    network_mode: "host"
+    container_name: clash
